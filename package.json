@@ -4,14 +4,15 @@
   "main": "src/server.js",
   "scripts": {
     "dist": "npx tsc",
-    "dev": "node src/server.ts",
-    "start": "node dist/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/server.ts",
+    "start": "cross-env NODE_ENV=prod node dist/server.js",
     "prepare": "husky"
   },
   "author": "Rehan Mahat",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@types/node": "^22.2.0",
     "husky": "^9.1.4",
     "lint-staged": "^15.2.8",
@@ -19,6 +20,9 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv-flow": "^4.1.0",
+    "express": "^4.19.2",
     "nodemon": "^3.1.4"
   }
 }
