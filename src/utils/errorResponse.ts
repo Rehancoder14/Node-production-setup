@@ -3,6 +3,7 @@ import { THttpError } from "../types/types";
 import responseMessage from "../constant/responseMessage";
 import config from "../config/config";
 import { EApplicationEnvironment } from "../constant/application";
+import logger from "./logger";
 export default (
   err: Error | unknown,
   req: Request,
@@ -22,7 +23,7 @@ export default (
     trace: err instanceof Error ? { error: err.stack } : null,
   };
 
-  console.error("CONTROLLER_RESPONSE", { meta: httpError });
+ logger.error("CONTROLLER_RESPONSE", { meta: httpError });
 
   if (config.ENV == EApplicationEnvironment.PRODUCTION) {
     delete httpError.request.ip;
