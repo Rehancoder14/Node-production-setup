@@ -4,10 +4,12 @@ import router from "./routes/apiRouter";
 import globalErrorHandler from "./middleware/globalErrorHandler";
 import httpError from "./utils/httpError";
 import responseMessage from "./constant/responseMessage";
+import helmet from "helmet";
 
 const app: Application = express();
 
 app.use(express.json()); // mandatory to json request
+app.use(helmet());
 app.use(express.static(path.join(__dirname, "../", "public")));
 app.use('/api/v1',router);
 app.use((req: Request, _: Response, next: NextFunction) => {

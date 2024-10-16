@@ -1,7 +1,7 @@
 
 
 export default{
-    SUCCESS: "The operation has been successfull",
+    SUCCESS: "Success",
     SOMETHINGWENTWRONG : "Somthing went wrong",
     NOTFOUND: (entity: string)=>{
         return `${entity} not found`
