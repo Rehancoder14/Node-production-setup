@@ -14,12 +14,12 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^22.2.0",
-    "husky": "^9.1.4",
-    "lint-staged": "^15.2.8",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.6",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
+    "typescript": "^5.6.3"
   },
   "dependencies": {
     "@types/cors": "^2.8.17",
@@ -29,14 +29,16 @@
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "dotenv-flow": "^4.1.0",
-    "express": "^4.19.2",
+    "express": "^4.21.1",
     "helmet": "^8.0.0",
-    "mongoose": "^8.7.1",
-    "nodemon": "^3.1.4",
+    "mongoose": "^8.7.2",
+    "nodemon": "^3.1.7",
+    "npm-check-updates": "^17.1.4",
+    "rate-limiter-flexible": "^5.0.3",
     "source-map-support": "^0.5.21",
     "ts-migrate-mongoose": "^3.8.4",
     "util": "^0.12.5",
-    "winston": "^3.14.2",
+    "winston": "^3.15.0",
     "winston-mongodb": "^6.0.0"
   }
 }
