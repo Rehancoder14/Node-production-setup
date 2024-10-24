@@ -7,6 +7,9 @@
     "dev": "cross-env NODE_ENV=development nodemon --legacy-watch src/server.ts",
     "start": "cross-env NODE_ENV=prod node dist/server.js",
     "prepare": "husky",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
     "migrate:dev": "cross-env MIGRATE_MODE=development node script/migration.js",
     "migrate:prod": "cross-env MIGRATE_MODE=development node script/migration.js"
   },
